@@ -14,7 +14,7 @@ while game < 1:
     print("To the south is the porch.")
   
   next =  input("WHAT NEXT?:")
-  # print(" {}").format(next))
+  print(next)
   if next == "go kitchen" and location == "porch":
       location = "kitchen"
   if next == "go porch" and location == "kitchen":
