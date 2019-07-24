@@ -53,8 +53,9 @@ while game < 1:
 # Upon loop of text interface show basic variable values
 # As associated with the players view of the game.
 
+  print ("------------------------------------")
   print("HP:{}".format(HP))
-  print("You are at {}.".format(location))
+  print("Location:{}.".format(location))
 
 ###########################################################
 # THIS SECTION IS FOR WHERE WHAT YOU CAN SEE IS DISPLAYED #
@@ -124,7 +125,8 @@ while game < 1:
 #  \
 # #####
 
-  next =  input("WHAT NEXT?:")
+  print ("")
+  next =  input("WHAT NEXT?: >>")
 
 # #####
 #  /
@@ -135,7 +137,7 @@ while game < 1:
 # This line shows how to display the users input back
 # to them for the fucking hell of it.
 
-  print(next)
+#  print(next)
 
   if location == "closet" and next == "go kitchen":
     location = "kitchen"
@@ -155,8 +157,10 @@ while game < 1:
   if location == "porch" and next == "go sidewalk":
     location = "sidewalk"
 
+  if location == "library" and next == "go computer":
+    location = "computer"
   if location == "library" and next == "go sidewalk":
-    locatoin = "sidewalk"
+    location = "sidewalk"
 
   if location == "sidewalk" and next == "go porch":
     location = "porch"
@@ -181,7 +185,7 @@ while game < 1:
   if location == "street" and next == "go sidewalk":
     location = "sidewalk"
   if location == "street" and next == "go stock market":
-    locatoin = "stock market"
+    location = "stock market"
 
   if location == "stock market" and next == "go street":
     location = "street"
@@ -200,9 +204,8 @@ while game < 1:
 # THIS IS FOR WARPS #
 #####################
 
-if next == "warp porch":
-  location = "porch"
+  if next == "warp porch":
+    location = "porch"
 
-if next == "warp secret room":
-  location = "secret room"
-
+  if next == "warp secret room":
+    location = "secret room"
