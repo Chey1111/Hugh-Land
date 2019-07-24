@@ -1,8 +1,8 @@
 # ##################################################################
-# # Title":    Hugh-Land                                           #
+# # Title:     Hugh-Land                                           #
 # # By:        Steven Jacks and Jeff Shipton                       #
 # # Date:      Started 7/23/2019                                   #
-# # Objective: Wtf?  go bleep urself.  This a text based game niku #
+# # Objective: This a text based game                              #
 # ##################################################################
 
 #MAP KEY:
@@ -27,12 +27,12 @@
 #             # STOCK MARKET #
 #             ################
 #                    |
-#  ############   ########
-#  # DUMPSTER #---# ALLEY#
-#  ############   ########
+#  ############   #########
+#  # DUMPSTER #---# ALLEY #
+#  ############   #########
 
 # This is where we set up the initial game variables
- # when start show game is not over
+# when start show game is not over
 game = 0
 # This variable shows where the starting location is at.
 # You can change the hardcode if you wish for a different starting location.
