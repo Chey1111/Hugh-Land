@@ -1,7 +1,7 @@
 # ##################################################################
 # # Title:     Hugh-Land                                           #
 # # By:        Steven Jacks and Jeff Shipton                       #
-# # Date:      Started 7/23/2019                                   #
+# # Date:      Started 7/22/2019                                   #
 # # Objective: This a text based game                              #
 # ##################################################################
 
@@ -44,6 +44,15 @@ HP = 100
 # of money carried.  Default is that it starts at zero.
 MO = 0
 
+import random
+rn = random.randint(0,2)
+
+if rn == 0:
+  key = "closet"
+if rn == 1:
+  key = "bedroom"
+if rn == 2:
+  key = "kitchen"
 # THIS IS WHERE THE TEXT-GAME LOOP BEGINS
 
 # This is in reference to the "game" variable instated earlier
@@ -56,11 +65,15 @@ while game < 1:
   print ("------------------------------------")
   print("HP:{}".format(HP))
   print("Location:{}.".format(location))
-
 ###########################################################
 # THIS SECTION IS FOR WHERE WHAT YOU CAN SEE IS DISPLAYED #
 ###########################################################
 
+## items
+
+  if location == key:
+    print("There is a key here.")
+    
 ## disp is displayed in nsew order
 
   if location == "closet":
@@ -134,10 +147,18 @@ while game < 1:
 #  \
 # #####
 
-# This line shows how to display the users input back
-# to them for the fucking hell of it.
+# get items
 
-#  print(next)
+  if location == key and next == "get key":
+    key = "inventory"
+    
+  if next == "drop key" and key == "inventory":
+    key = location
+    
+  if next == "check inventory" and key == "inventory":
+    print("Inventory: Key")
+
+# move statements
 
   if location == "closet" and next == "go kitchen":
     location = "kitchen"
@@ -209,3 +230,5 @@ while game < 1:
 
   if next == "warp secret room":
     location = "secret room"
+	
+	
