@@ -1,7 +1,7 @@
 # ##################################################################
 # # Title:     Hugh-Land                                           #
 # # By:        Steven Jacks and Jeff Shipton                       #
-# # Date:      Started 7/22/2019                                   #
+# # Date:      Started 7/23/2019                                   #
 # # Objective: This a text based game                              #
 # ##################################################################
 
@@ -205,8 +205,10 @@ while game < 1:
 
   if location == "street" and next == "go sidewalk":
     location = "sidewalk"
-  if location == "street" and next == "go stock market":
+  if location == "street" and next == "go stock market" and key == "inventory":
     location = "stock market"
+  if location == "street" and next == "go stock market" and key <> "inventory":
+    print("YOU NEED THE KEY TO GET INTO HERE.")
 
   if location == "stock market" and next == "go street":
     location = "street"
@@ -230,5 +232,3 @@ while game < 1:
 
   if next == "warp secret room":
     location = "secret room"
-	
-	
